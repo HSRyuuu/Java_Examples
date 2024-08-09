@@ -1,40 +1,21 @@
 package fileIO;
 
 import java.io.*;
-import java.util.Scanner;
 
-public class FileTest {
+public class FileHandling {
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
         FileHandler fileHandler = new FileHandler();
+
         System.out.println("1 : (절대 경로)파일 단순 생성 + 초기값 입력");
+        //fileHandler.createFileAbsolutePath();
         System.out.println("2 : (상대 경로)파일 단순 생성 + 초기값 입력");
+        //fileHandler.createFileRelativePath();
         System.out.println("3 : 파일 읽어오기 - character 하나씩 읽기");
+        //fileHandler.readFile();
         System.out.println("4 : 파일 입력 스트림 - BufferedOutputStream - 성능 향상");
+        //fileHandler.bufferedOutputStream();
         System.out.println("5 : 파일 불러오기 - BufferedInputStream");
-
-        System.out.print("실행할 함수 입력 : ");
-        int executeNumber = sc.nextInt();
-
-        switch (executeNumber){
-            case 1:
-                fileHandler.createFileAbsolutePath();
-                break;
-            case 2:
-                fileHandler.createFileRelativePath();
-                break;
-            case 3:
-                fileHandler.readFile();
-                break;
-            case 4:
-                fileHandler.bufferedOutputStream();
-                break;
-            case 5:
-                fileHandler.bufferedInputStream();
-                break;
-            default:
-                System.out.println("nothing");
-        }
+        //fileHandler.bufferedInputStream();
 
     }
 }
@@ -127,7 +108,5 @@ class FileHandler {
         }
 
     }
-
-
 
 }
